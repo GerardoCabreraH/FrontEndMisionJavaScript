@@ -4,8 +4,7 @@
 }
 
 .pokedex {
-    background-color: #c71133;
-    color: #fff;
+    background-color: #ce1131;
     border-radius: 50px 50px 50px 50px;
     -webkit-border-radius: 50px 50px 50px 50px;
     -moz-border-radius: 50px 50px 50px 50px;
@@ -19,15 +18,10 @@
     border: #000 solid 1px;
     border-top-left-radius: 50px;
     border-bottom-right-radius: 500px 100px;
-    /*border-radius: 50px 0 0 0;
-    -webkit-border-radius: 50px 0 0 0;
-    -moz-border-radius: 50px 0 0 0;
-    -ms-border-radius: 50px 0 0 0;
-    -o-border-radius: 50px 0 0 0;*/
 }
 
 .circle-header-pokedex-primary {
-    background: lightblue;
+    background: linear-gradient(135deg, #9ce8ff, #0bcdff, #009dd4);
     border: #000 solid 1px;
     border-radius: 50%;
     width: 100px;
@@ -35,7 +29,15 @@
 }
 
 .circle-header-pokedex-secondary {
-    background: lightblue;
+    background: linear-gradient(135deg, #ef0707, #9a0405);
+    border: #000 solid 1px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.circle-header-pokedex-secondary2 {
+    background: linear-gradient(135deg, #e2e615, #80840b);
     border: #000 solid 1px;
     border-radius: 50%;
     width: 50px;
@@ -51,7 +53,7 @@
 }
 
 .square-main-pokedex-primary {
-    background: gray;
+    background: #dedede;
     border: #000 solid 1px;
     width: 100%;
     height: 300px;
@@ -62,7 +64,7 @@
 }
 
 .square-main-pokedex-secondary {
-    background: lightblue;
+    background: #f1f2d3;
     border: #000 solid 1px;
     width: 95%;
     height: 220px;
@@ -89,7 +91,7 @@
 }
 
 .button-pokedex {
-    background: gray;
+    background: #222222;
     border: #000 solid 1px;
     border-radius: 50%;
     width: 100px;
@@ -104,8 +106,7 @@
 }
 
 .btn-pokedex-primary {
-    background: red;
-    color: #fff;
+    background: #c70c13;
     border: #000 solid 1px;
     height: 10px;
     width: 100%;
@@ -118,9 +119,8 @@
 }
 
 .btn-pokedex-secondary {
-    background: blue;
-    border: #fff solid 1px;
-    color: #fff;
+    background: #095378;
+    border: #000 solid 1px;
     height: 10px;
     width: 100%;
     padding: 0 20px;
@@ -136,7 +136,7 @@
     height: 100px;
     border: #000 solid 1px;
     border-radius: 50px;
-    background: linear-gradient(to bottom, transparent 35%, gray 35%, gray 65%,  transparent 65%),    linear-gradient(to right, transparent 35%, gray 35%, gray 65%, transparent 65%);
+    background: linear-gradient(to bottom, transparent 35%, #222222 35%, #222222 65%,  transparent 65%),    linear-gradient(to right, transparent 35%, #222222 35%, #222222 65%, transparent 65%);
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     -ms-border-radius: 50px;
@@ -152,7 +152,8 @@
 }
 
 .pokeSearch {
-    background-color: aqua;
+    background-color: #55ab62;
+    color: #000;
     border: #000 solid 1px;
     width: 50%;
     padding: 10px;
@@ -188,7 +189,8 @@
 }
 
 .square-main-pokedex-primary2 {
-    background: gray;
+    background: #032d29;
+    color: #ffe839;
     border: #000 solid 1px;
     width: 100%;
     height: 210px;
@@ -201,7 +203,8 @@
 }
 
 .square-main-pokedex-secondary2 {
-    background: lightblue;
+    background: #31a7f1;
+    color: #fff;
     border: #000 solid 1px;
     width: 100%;
     height: 150px;
@@ -236,7 +239,8 @@
 }
 
 .square-main-pokedex-secondary3 {
-    background: lightblue;
+    background: #dedede;
+    color: #000;
     border: #000 solid 1px;
     width: 45%;
     height: 100px;
@@ -249,7 +253,7 @@
 }
 
 .button-pokedex2 {
-    background: gray;
+    background: linear-gradient(135deg, #c4be9a, #c6bc42, #8b8635);
     border: #000 solid 1px;
     border-radius: 50%;
     width: 50px;
@@ -257,7 +261,8 @@
 }
 
 .square-main-pokedex-secondary4 {
-    background: lightblue;
+    background: #032d29;
+    color: #ffe839;
     border: #000 solid 1px;
     width: 50%;
     height: 75px;
@@ -271,6 +276,20 @@
 
 .square-main-pokedex-secondary4:first-child {
     margin: 0 26px 0 0;
+}
+
+.btn-pokedex-primary2 {
+    background: #313131;
+    color: #fff;
+    border: #000 solid 1px;
+    height: 10px;
+    width: 100%;
+    padding: 0 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 @media only screen and (max-width: 768px){
