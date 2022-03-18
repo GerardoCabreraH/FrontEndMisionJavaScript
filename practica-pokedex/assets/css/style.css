@@ -28,6 +28,7 @@
 
 .circle-header-pokedex-primary {
     background: lightblue;
+    border: #000 solid 1px;
     border-radius: 50%;
     width: 100px;
     height: 100px;
@@ -35,6 +36,7 @@
 
 .circle-header-pokedex-secondary {
     background: lightblue;
+    border: #000 solid 1px;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -50,6 +52,7 @@
 
 .square-main-pokedex-primary {
     background: gray;
+    border: #000 solid 1px;
     width: 100%;
     height: 300px;
     -webkit-border-bottom-left-radius: 50px;
@@ -60,6 +63,7 @@
 
 .square-main-pokedex-secondary {
     background: lightblue;
+    border: #000 solid 1px;
     width: 95%;
     height: 220px;
     position: absolute;
@@ -86,6 +90,7 @@
 
 .button-pokedex {
     background: gray;
+    border: #000 solid 1px;
     border-radius: 50%;
     width: 100px;
     height: 100px;
@@ -101,6 +106,7 @@
 .btn-pokedex-primary {
     background: red;
     color: #fff;
+    border: #000 solid 1px;
     height: 10px;
     width: 100%;
     padding: 0 20px;
@@ -113,6 +119,7 @@
 
 .btn-pokedex-secondary {
     background: blue;
+    border: #fff solid 1px;
     color: #fff;
     height: 10px;
     width: 100%;
@@ -127,8 +134,13 @@
 .cross-button-pokedex {
     width: 100px;
     height: 100px;
-    background: linear-gradient(to bottom, transparent 35%, gray 35%, gray 65%,  transparent 65%),
-    linear-gradient(to right, transparent 35%, gray 35%, gray 65%, transparent 65%);
+    border: #000 solid 1px;
+    border-radius: 50px;
+    background: linear-gradient(to bottom, transparent 35%, gray 35%, gray 65%,  transparent 65%),    linear-gradient(to right, transparent 35%, gray 35%, gray 65%, transparent 65%);
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
 }
 
 .pokedex-input {
@@ -141,6 +153,7 @@
 
 .pokeSearch {
     background-color: aqua;
+    border: #000 solid 1px;
     width: 50%;
     padding: 10px;
 }
@@ -176,6 +189,7 @@
 
 .square-main-pokedex-primary2 {
     background: gray;
+    border: #000 solid 1px;
     width: 100%;
     height: 210px;
     padding: 17px;
@@ -188,6 +202,7 @@
 
 .square-main-pokedex-secondary2 {
     background: lightblue;
+    border: #000 solid 1px;
     width: 100%;
     height: 150px;
     padding: 8px;
@@ -222,6 +237,7 @@
 
 .square-main-pokedex-secondary3 {
     background: lightblue;
+    border: #000 solid 1px;
     width: 45%;
     height: 100px;
     padding: 5px;
@@ -234,6 +250,7 @@
 
 .button-pokedex2 {
     background: gray;
+    border: #000 solid 1px;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -241,6 +258,7 @@
 
 .square-main-pokedex-secondary4 {
     background: lightblue;
+    border: #000 solid 1px;
     width: 50%;
     height: 75px;
     padding: 5px;

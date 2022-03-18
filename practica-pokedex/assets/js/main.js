@@ -13,7 +13,7 @@ const fetchPokemon = () => {
         }
     }).then((data) => {
         console.log(data);
-        let pokeImg = data.sprites.front_default;
+        let pokeImg = data.sprites.other.dream_world.front_default;
         let pokeName = data.name;
         let pokeId = data.id;
         let pokeWeight = data.weight;
@@ -77,6 +77,8 @@ const pokeTypes = (types) => {
         typeTextElement.textContent = typeTraslate[type.type.name];
         pokeTypes.appendChild(typeTextElement);
         pokeTypes.appendChild(lineBreak);
+        pokeTypes.replaceChild(typeTextElement, typeTextElement);
+        pokeTypes.replaceChild(lineBreak, lineBreak);
     });
 }
 
@@ -91,6 +93,7 @@ const statsTraslate = {
 
 const pokeStats = (stats) => {
     const pokeStats = document.getElementById('pokeStats');
+    pokeStats.innerHTML = " ";
     stats.forEach(stat => {
         const statElementName = document.createElement("span");
         const statElementAmount = document.createElement("span");
@@ -102,11 +105,14 @@ const pokeStats = (stats) => {
         pokeStats.appendChild(statElementName);
         pokeStats.appendChild(statElementAmount);
         pokeStats.appendChild(lineBreak);
+        pokeStats.replaceChild(statElementName, statElementName);
+        pokeStats.replaceChild(statElementAmount, statElementAmount);
     });
 }
 
 const pokeMoves = (moves) => {
     const pokeMoves = document.getElementById('pokeMoves');
+    pokeMoves.innerHTML = " ";
     moves.forEach(move => {
         const moveElement = document.createElement("span");
         const lineBreak = document.createElement("br");
@@ -114,6 +120,7 @@ const pokeMoves = (moves) => {
         moveElement.textContent = move.move.name;
         pokeMoves.appendChild(moveElement);
         pokeMoves.appendChild(lineBreak);
+        pokeMoves.replaceChild(moveElement, moveElement);
     });
 }
 
