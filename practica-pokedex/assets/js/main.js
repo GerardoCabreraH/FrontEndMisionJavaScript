@@ -17,12 +17,15 @@ const fetchPokemon = () => {
         let pokeName = data.name;
         let pokeId = data.id;
         let pokeWeight = data.weight;
-        const { stats, types, moves } = data;
+        let pokeHeight = data.height;
+        const { types, stats, moves } = data;
         pokeImage(pokeImg);
-        pokeTitle(`ID: ${pokeId} Nombre: ${pokeName}`);
+        pokeIdentifider(`#${pokeId}`);
+        pokeTitle(`Nombre: ${pokeName}`);
         pokeTypes(types);
         pokeStats(stats);
         pokeSizeWeight(pokeWeight);
+        pokeSizeHeight(pokeHeight);
         pokeMoves(moves.sort((a, b) => 0.5 - Math.random()).slice(0, 4));
     });
 }
@@ -30,6 +33,12 @@ const fetchPokemon = () => {
 const pokeImage = (url) => {
     const pokeImg = document.getElementById('pokeImg');
     pokeImg.src = url;
+}
+
+const pokeIdentifider = (id) => {
+    const pokeId = document.getElementById('pokeId');
+    pokeId.style.textTransform = 'capitalize';
+    pokeId.innerHTML = id;
 }
 
 const pokeTitle = (name) => {
@@ -60,14 +69,14 @@ const typeTraslate = {
 
 const pokeTypes = (types) => {
     const pokeTypes = document.getElementById('pokeType');
-    const typeTextTitle = document.createElement("h2");
-    typeTextTitle.textContent = "Tipo de pokemon";
-    pokeTypes.appendChild(typeTextTitle);
+    pokeTypes.innerHTML = " ";
     types.forEach(type => {
-        const typeTextElement = document.createElement("p");
+        const typeTextElement = document.createElement("span");
+        const lineBreak = document.createElement("br");
         typeTextElement.style.textTransform = 'capitalize';
         typeTextElement.textContent = typeTraslate[type.type.name];
         pokeTypes.appendChild(typeTextElement);
+        pokeTypes.appendChild(lineBreak);
     });
 }
 
@@ -82,42 +91,38 @@ const statsTraslate = {
 
 const pokeStats = (stats) => {
     const pokeStats = document.getElementById('pokeStats');
-    const typeTextTitle = document.createElement("h2");
-    typeTextTitle.textContent = "Estadisticas";
-    pokeStats.appendChild(typeTextTitle);
     stats.forEach(stat => {
-        const statElement = document.createElement("p");
         const statElementName = document.createElement("span");
         const statElementAmount = document.createElement("span");
+        const lineBreak = document.createElement("br");
         statElementName.style.textTransform = 'capitalize';
         statElementName.style.fontWeight = 'bold';
         statElementName.textContent = statsTraslate[stat.stat.name] + ": ";
         statElementAmount.textContent = stat.base_stat;
-        statElement.appendChild(statElementName);
-        statElement.appendChild(statElementAmount);
-        pokeStats.appendChild(statElement);
+        pokeStats.appendChild(statElementName);
+        pokeStats.appendChild(statElementAmount);
+        pokeStats.appendChild(lineBreak);
     });
 }
 
 const pokeMoves = (moves) => {
     const pokeMoves = document.getElementById('pokeMoves');
-    const movesTextTitle = document.createElement("h2");
-    movesTextTitle.textContent = "Movimientos";
-    pokeMoves.appendChild(movesTextTitle);
     moves.forEach(move => {
-        const moveElement = document.createElement("p");
+        const moveElement = document.createElement("span");
+        const lineBreak = document.createElement("br");
         moveElement.style.textTransform = 'capitalize';
         moveElement.textContent = move.move.name;
         pokeMoves.appendChild(moveElement);
+        pokeMoves.appendChild(lineBreak);
     });
 }
 
 const pokeSizeWeight = (weight) => {
-    const pokeSize = document.getElementById('pokeWeight');
-    pokeSize.innerHTML = weight;
+    const pokeWeight = document.getElementById('pokeWeight');
+    pokeWeight.innerHTML = weight;
 }
 
-const pokeSizeHeight = (heigt) => {
-    const pokeSize = document.getElementById('pokeSize');
-    pokeSize.innerHTML = heigt;
+const pokeSizeHeight = (height) => {
+    const pokeHeight = document.getElementById('pokeHeight');
+    pokeHeight.innerHTML = height;
 }

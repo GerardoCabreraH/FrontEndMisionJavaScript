@@ -13,6 +13,12 @@
 <body>
     <main class="container my-5">
         <h1>Pokedex</h1>
+        <div class="form-group">
+            <input type="text" name="pokeName" id="pokeName" placeholder="Nombre / Id" class="form-control">
+        </div>
+        <div class="form-group">
+            <button onclick="fetchPokemon()" class="btn btn-primary">Buscar Pokemon</button>
+        </div>
         <div class="pokedex">
             <div class="row">
                 <div class="col-12 col-sm-6">
@@ -45,10 +51,10 @@
                     <div class="pokedexContent">
                         <section id="pokedexMainSection" class="pokedexMainSection">
                             <div class="container">
-                                <div class="pokedex-screen">
+                                <div class="pokedex-screen d-flex justify-content-center">
                                     <div class="square-main-pokedex-primary"></div>
                                     <div class="square-main-pokedex-secondary d-flex justify-content-center">
-                                        <img src="assets/img/pokeball.png" alt="pokeball" width="132px">
+                                        <img id="pokeImg" src="assets/img/pokeball.png" alt="pokeball" width="150px" >
                                     </div>
                                 </div>
                             </div>
@@ -65,8 +71,8 @@
                                 </div>
                                 <div class="pokedex-input">
                                     <div class="pokeSearch">
-                                        <h2>#ID</h2>
-                                        <h2>Pokemon</h2>
+                                        <h4 id="pokeId">#</h4>
+                                        <h4 id="pokeTitle">Pokemon</h4>
                                     </div>
                                 </div>
                             </div>
@@ -79,32 +85,16 @@
                             <div class="container">
                                 <div class="pokedex-screen">
                                     <div class="square-main-pokedex-primary2">
-                                        <h2>Estadisticas</h2>
+                                        <h4>Estadisticas</h4>
                                         <div class="row">
-                                            <div class="col-12 col-sm-6">
-                                                <p>HP</p>
-                                                <p>Ataque</p>
-                                                <p>Defensa</p>
-                                            </div>
-                                            <div class="col-12 col-sm-6">
-                                                <p>Velocidad</p>
-                                                <p>Ataque especial</p>
-                                                <p>Defensa especial</p>
+                                            <div class="col-12 col-sm-12">
+                                                <p id="pokeStats"></p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="square-main-pokedex-secondary2">
-                                        <h2>Movimientos</h2>
-                                        <div class="row">
-                                            <div class="col-12 col-sm-6">
-                                                <p>Movimiento</p>
-                                                <p>Movimiento</p>
-                                            </div>
-                                            <div class="col-12 col-sm-6">
-                                                <p>Movimiento</p>
-                                                <p>Movimiento</p>
-                                            </div>
-                                        </div>
+                                        <h4>Movimientos</h4>
+                                        <p id="pokeMoves"></p>
                                     </div>
                                 </div>
                                 <div class="pokedex-control2">
@@ -115,16 +105,19 @@
                                 </div>
                                 <div class="pokedex-control3">
                                     <div class="square-main-pokedex-secondary3">
-                                        Tipo de pokemon
+                                        <h4>Tipo</h4>
+                                        <p id="pokeType"></p>
                                     </div>
                                     <div class="button-pokedex2"></div>
                                 </div>
                                 <div class="pokedex-control3">
-                                    <div class="square-main-pokedex-secondary3">
-                                        <p>Peso</p>
+                                    <div class="square-main-pokedex-secondary4">
+                                        <h4>Peso</h4>
+                                        <p id="pokeWeight"></p>
                                     </div>
-                                    <div class="square-main-pokedex-secondary3 ml-5">
-                                        <p>Altura</p>
+                                    <div class="square-main-pokedex-secondary4">
+                                        <h4>Altura</h4>
+                                        <p id="pokeHeight"></p>
                                     </div>
                                 </div>
                             </div>
@@ -136,5 +129,6 @@
     </main>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
